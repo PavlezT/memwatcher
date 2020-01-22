@@ -44,7 +44,7 @@ module.exports = (options) => {
   emitter.on('increased', over => {
     console.log('stats-event-heapTotal %d', Math.floor(process.memoryUsage().heapTotal / (1024 * 1024)))
     console.log('stats-event-heapUsed %d', Math.floor(process.memoryUsage().heapUsed / (1024 * 1024)))
-    const statsDumpFile = `/tmp/stats-profile-${over}-${process.pid}-${Date.now()}.heapsnapshot`
+    const statsDumpFile = `${dumpFileDir}stats-profile-${over}-${process.pid}-${Date.now()}.heapsnapshot`;
     console.error(`Memory stats updated exceeds ${over}`);
     return heapdump.writeSnapshot(statsDumpFile, function(err) {
       if (err) {
