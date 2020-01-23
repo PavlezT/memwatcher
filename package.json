@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "heapdump": "^0.3.9",
-    "node-memwatch": "git+https://github.com/venkateshwarlu-bavandla/node-memwatch.git",
+    "node-memwatch": "git+https://github.com/venkateshwarlu-bavandla/node-memwatch.git"
   },
   "devDependencies": {
     "ava": "^0.24.0"
